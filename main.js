@@ -21,6 +21,16 @@ function createPassword(){
     }
 
     passwordBox.value = password;
-
-
 }
+
+function copyText() {
+    var input = document.getElementById("password");
+    console.log('copy text clicked')
+    navigator.clipboard.writeText(input.value)
+      .then(() => {
+        alert("Text copied to clipboard");
+      })
+      .catch(err => {
+        console.error('Could not copy text: ', err);
+      });
+  }
