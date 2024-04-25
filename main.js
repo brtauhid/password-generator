@@ -25,12 +25,6 @@ function createPassword(){
 
 function copyText() {
     var input = document.getElementById("password");
-    console.log('copy text clicked')
     navigator.clipboard.writeText(input.value)
-      .then(() => {
-        alert("Text copied to clipboard");
-      })
-      .catch(err => {
-        console.error('Could not copy text: ', err);
-      });
+    alert("Text copied to Clipboard");
   }
