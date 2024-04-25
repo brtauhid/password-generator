@@ -24,7 +24,15 @@ function createPassword(){
 }
 
 function copyText() {
-    var input = document.getElementById("password");
-    navigator.clipboard.writeText(input.value)
-    alert("Text copied to Clipboard");
-  }
+    let input = document.getElementById("password");
+    if(input.value.length > 0 ){
+        navigator.clipboard.writeText(input.value)
+        alert("Text copied to Clipboard");
+    }
+    else(alert('Please generate a password'))
+    
+        
+    }
+
+
+  
